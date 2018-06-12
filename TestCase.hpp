@@ -19,11 +19,11 @@ using namespace std;
 class TestCase{
   
     string Test_name;
-    ostream out;
+    ostream& out;
     int passed, failed,total;
 
 public: 
-TestCase(string test_name,ostream& os) : out(cout.rdbuf()){
+TestCase(string test_name,ostream& os) : out(os){
     Test_name=test_name;
     passed=0;
     failed=0;
