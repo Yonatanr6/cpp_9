@@ -63,7 +63,7 @@ TestCase& check_function(fun_temp fun,const Temp a,const Temp2 b){
      passed++;
  
     else{
-        out<<Test_name<<" : Function should return"<<total<<" : "<<a<<" but returned "<<b<<"!"<<endl;
+        out<<Test_name<<" : Failure in test #"<<total<<" : Function should return "<<a<<" but returned "<<b<<"!"<<endl;
         failed++;
     }
     return *this;
@@ -78,7 +78,7 @@ TestCase& check_output(Temp a,string str){
      passed++;
  
     else{
-        out<<Test_name<<" : string value should be"<<total<<" : "<<a<<" but is "<<str<<"!"<<endl;
+        out<<Test_name<<" : Failure in test #"<<total<<" : string value should be "<<a<<" but is "<<str<<"!"<<endl;
         failed++;
     }
     return *this;
