@@ -55,7 +55,7 @@ TestCase& check_different(Temp a,Temp2 b){
 }
 
 template<typename fun_temp,typename Temp,typename Temp2>
-TestCase& check_function(fun_temp fun,const Temp a,const Temp2 b){
+TestCase& check_function(const fun_temp fun,const Temp a,const Temp2 b){
      total++;
     int result=(*fun)(a);
             
