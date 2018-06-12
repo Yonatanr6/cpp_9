@@ -54,7 +54,7 @@ TestCase& check_different(Temp a,Temp2 b){
     return *this;
 }
 
-template<typename fun_temp,class Temp,class Temp2>
+template<typename fun_temp,typename Temp,typename Temp2>
 TestCase& check_function(fun_temp fun,const Temp a,const Temp2 b){
      total++;
     int result=(*fun)(a);
@@ -69,7 +69,7 @@ TestCase& check_function(fun_temp fun,const Temp a,const Temp2 b){
     return *this;
 
 }
-template<class Temp>
+template<typename Temp>
 TestCase& check_output(Temp a,string str){
     total++;
     stringstream ss;
@@ -85,7 +85,7 @@ TestCase& check_output(Temp a,string str){
 
 }
 void print(){
-   out<<Test_name<<" : "<<failed<<" Failed ,"<<passed<<" Passed ,"<<total<<" Total "<<endl;
+   out<<Test_name<<" : "<<failed<<" failed ,"<<passed<<" passed ,"<<total<<" total "<<endl;
 
 }
 
