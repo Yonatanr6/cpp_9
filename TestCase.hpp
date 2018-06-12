@@ -29,8 +29,9 @@ TestCase(string test_name,ostream& os) : out(cout.rdbuf()){
     failed=0;
     total=0;
 }
-template<class Temp>
-TestCase& check_equal(Temp a,Temp b){
+
+template<class Temp, class Temp2>
+TestCase& check_equal(Temp a,Temp2 b){
     total++;
     if(a==b)
         passed++;
@@ -41,8 +42,8 @@ TestCase& check_equal(Temp a,Temp b){
     return *this;
 }
 
-template<class Temp>
-TestCase& check_different(Temp a,Temp b){
+template<class Temp, class Temp2>
+TestCase& check_different(Temp a,Temp2 b){
     total++;
     if(a!=b)
         passed++;
